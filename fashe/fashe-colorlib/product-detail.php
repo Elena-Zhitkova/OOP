@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>About</title>
+	<title>Product Detail</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -79,7 +79,9 @@
 								<a href="product.php">Shop</a>
 							</li>
 
-							
+							<li class="sale-noti">
+								<a href="index.php#sale">Sale</a>
+							</li>
 
 							<li>
 								<a href="about.html">About</a>
@@ -101,9 +103,81 @@
 					<span class="linedivide1"></span>
 
 					<div class="header-wrapicon2">
-						<a href="cart.php" class="header-wrapicon1 dis-block">
-							<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						</a>						
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti">0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-01.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											White Shirt With Pleat Detail Back
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $19.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-02.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Converse All Star Hi Black Canvas
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $39.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-03.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Nixon Porter Leather Watch In Tan
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $17.00
+										</span>
+									</div>
+								</li>
+							</ul>
+
+							<div class="header-cart-total">
+								Total: $75.00
+							</div>
+
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="cart.php" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+								</div>
+
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Check Out
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -120,7 +194,7 @@
 			<div class="btn-show-menu">
 				<!-- Header Icon mobile -->
 				<div class="header-icons-mobile">
-					<a href="#" class="header-wrapicon1 dis-block">
+					<a href="account.php" class="header-wrapicon1 dis-block">
 						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 					</a>
 
@@ -189,7 +263,7 @@
 							<div class="header-cart-buttons">
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="cart.php" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										View Cart
 									</a>
 								</div>
@@ -262,9 +336,12 @@
 						<a href="product.php">Shop</a>
 					</li>
 
-					
 					<li class="item-menu-mobile">
-						<a href="cart.html">Features</a>
+						<a href="index.php#sale">Sale</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="cart.php">Features</a>
 					</li>
 
 					<li class="item-menu-mobile">
@@ -283,44 +360,67 @@
 		</div>
 	</header>
 
-	<!-- Title Page -->
-	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/about-long.jpg);">
-		<h2 class="l-text2 t-center">
-			About
-		</h2>
-	</section>
+	<?php 
 
-	<!-- content page -->
-	<section class="bgwhite p-t-66 p-b-38">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 p-b-30">
-					<div class="hov-img-zoom">
-						<img src="images/about.jpg" alt="IMG-ABOUT">
-					</div>
-				</div>
+   			require_once('config.php'); 
 
-				<div class="col-md-8 p-b-30">
-					<h3 class="m-text26 p-t-15 p-b-16">
-						Our story
-					</h3>
+			$sql = "SELECT * FROM warehouse WHERE id = {$_GET['id']}";
+			$result = mysqli_query($db, $sql);
+			
+			 $row = mysqli_fetch_assoc($result);
+				echo   
+				
+					"<div class='container bgwhite p-t-35 p-b-80'>
+						<div class='flex-w flex-sb'>
+							<div class='w-size13 p-t-30 respon5'>
+								<div class='wrap-slick3 flex-sb flex-w'>
 
-					<p class="p-b-28">
-						4U is a jewelry brand created by Elena U, whose idea was to create unique, original jewelry at affordable prices.
+									<div class='slick3'>
+										<div class='item-slick3' data-thumb='images/thumb-item-01.jpg'>
+											<div class='wrap-pic-w'>
+												<img src='{$row['img']}' alt='IMG-PRODUCT'>
+											</div>
+										</div>
 
-We want to give You the opportunity to look unique, Express yourself in a new way, giving up the jaded mass market. Each piece of jewelry was designed by the chief designer Elena U personally.
-Everything flows and changes quickly, and in order to keep up with the current, you need to be fast as a mountain river, plastic as metal, but not lose your identity. We use the principle of transformation in our products, thereby emphasizing the versatility of the personality and the uniqueness of the moment of the owner of 4 jewel.
+									</div>
+								</div>
+							</div>
 
-The high quality of the materials used in our products is very important to us, so the author's supervision takes place throughout the entire production of jewelry.
+							<div class='w-size14 p-t-30 respon5'>
+								<h4 class='product-detail-name m-text16 p-b-13'>
+									{$row['name']}
+								</h4>
 
-From the approval of the technical sketch to the selection of the appropriate material for the future model, we use silver , semi-precious stones, pearls and high-quality synthetic stones from reliable manufacturers in our products.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
+								<span class='m-text17'>
+									$ {$row['price']}
+								</span>
 
+								<div class='block2-btn-addcart w-size1 trans-0-4'>
+								<!-- Button -->
+									<button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>
+										Buy Motherf**ker (ง ͠° ͟ل͜ ͡°)ง
+									</button>
+								</div>
 
+								<!--  -->
+								<div class='wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content'>
+									<h5 class='js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4'>
+										Description
+										<i class='down-mark fs-12 color1 fa fa-minus dis-none' aria-hidden='true'></i>
+										<i class='up-mark fs-12 color1 fa fa-plus' aria-hidden='true'></i>
+									</h5>
+
+									<div class='dropdown-content dis-none p-t-15 p-b-23'>
+										<p class='s-text8'>
+											{$row['description']}
+										</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>";
+	?>
 	<!-- Footer -->
 	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
 		<div class="flex-w p-b-90">
@@ -431,6 +531,34 @@ From the approval of the technical sketch to the selection of the appropriate ma
 			dropdownParent: $('#dropDownSelect2')
 		});
 	</script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick-custom.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script type="text/javascript">
+		$('.block2-btn-addcart').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+
+		$('.block2-btn-addwishlist').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+			});
+		});
+
+		$('.btn-addcart-product-detail').each(function(){
+			var nameProduct = $('.product-detail-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+			});
+		});
+	</script>
+
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 

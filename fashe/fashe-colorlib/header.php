@@ -1,7 +1,12 @@
+<?php
+$flag_enter = -1;
+if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 1 == $_SESSION['access']) $flag_enter = 1;
+if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['access']) $flag_enter = 0;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>About</title>
+	<title>Contact</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -49,7 +54,7 @@
 
 				<div class="topbar-child2">
 					<span class="topbar-email">
-						4U@gmail.com
+						4u@gmail.com
 					</span>
 
 					<div class="topbar-language rs1-select2">
@@ -70,6 +75,23 @@
 				<!-- Menu -->
 				<div class="wrap_menu">
 					<nav class="menu">
+						<?php
+							if ($flag_enter == 1) {
+								echo "<li>
+								<a href='index.php'>Admin</a>
+							</li>";
+								}else
+								if ($flag_enter == 0) {
+									echo "<li>
+									<a href='index.php'>User</a>
+								</li>";
+									}else
+									if ($flag_enter == -1) {
+										echo "<li>
+										<a href='index.php'>You</a>
+									</li>";
+										}
+							?>
 						<ul class="main_menu">
 							<li>
 								<a href="index.php">Main</a>
@@ -120,7 +142,7 @@
 			<div class="btn-show-menu">
 				<!-- Header Icon mobile -->
 				<div class="header-icons-mobile">
-					<a href="#" class="header-wrapicon1 dis-block">
+					<a href="account.php" class="header-wrapicon1 dis-block">
 						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 					</a>
 
@@ -189,7 +211,7 @@
 							<div class="header-cart-buttons">
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="cart.php" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										View Cart
 									</a>
 								</div>
@@ -263,8 +285,9 @@
 					</li>
 
 					
+
 					<li class="item-menu-mobile">
-						<a href="cart.html">Features</a>
+						<a href="cart.php">Features</a>
 					</li>
 
 					<li class="item-menu-mobile">
@@ -283,156 +306,5 @@
 		</div>
 	</header>
 
-	<!-- Title Page -->
-	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/about-long.jpg);">
-		<h2 class="l-text2 t-center">
-			About
-		</h2>
-	</section>
 
-	<!-- content page -->
-	<section class="bgwhite p-t-66 p-b-38">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 p-b-30">
-					<div class="hov-img-zoom">
-						<img src="images/about.jpg" alt="IMG-ABOUT">
-					</div>
-				</div>
-
-				<div class="col-md-8 p-b-30">
-					<h3 class="m-text26 p-t-15 p-b-16">
-						Our story
-					</h3>
-
-					<p class="p-b-28">
-						4U is a jewelry brand created by Elena U, whose idea was to create unique, original jewelry at affordable prices.
-
-We want to give You the opportunity to look unique, Express yourself in a new way, giving up the jaded mass market. Each piece of jewelry was designed by the chief designer Elena U personally.
-Everything flows and changes quickly, and in order to keep up with the current, you need to be fast as a mountain river, plastic as metal, but not lose your identity. We use the principle of transformation in our products, thereby emphasizing the versatility of the personality and the uniqueness of the moment of the owner of 4 jewel.
-
-The high quality of the materials used in our products is very important to us, so the author's supervision takes place throughout the entire production of jewelry.
-
-From the approval of the technical sketch to the selection of the appropriate material for the future model, we use silver , semi-precious stones, pearls and high-quality synthetic stones from reliable manufacturers in our products.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<!-- Footer -->
-	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
-		<div class="flex-w p-b-90">
-			<div class="j-c-s-b p-t-30 p-l-15 p-r-15 respon3">
-				<h4 class="s-text12 p-b-30">
-					GET IN TOUCH
-				</h4>
-
-				<div>
-					<p class="s-text7 w-size27">
-						Any questions? Let us know in store at 2nd floor, 28 Yakuba Kolasa St, Minsk or call us on (+375) 29 000 00 00
-					</p>
-
-					<div class="flex-m p-t-30">
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="j-c-s-b p-t-30 p-l-15 p-r-15 respon3">
-				<a href="index.php">
-					<img src="images/icons/logo.png" alt="IMG-LOGO">
-				</a>
-			</div>
-
-			<div class="j-c-s-b w-size8 p-t-30 p-l-15 p-r-15 respon3">
-				<h4 class="s-text12 p-b-30">
-					Newsletter
-				</h4>
-
-				<form>
-					<div class="effect1 w-size9">
-						<input class="s-text7 bg6 w-full p-b-5" type="text" name="email" placeholder="email@example.com">
-						<span class="effect1-line"></span>
-					</div>
-
-					<div class="w-size2 p-t-20">
-						<!-- Button -->
-						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-							Subscribe
-						</button>
-					</div>
-
-				</form>
-			</div>
-		</div>
-
-		<div class="t-center p-l-15 p-r-15">
-			<a href="#">
-				<img class="h-size2" src="images/icons/paypal.png" alt="IMG-PAYPAL">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="images/icons/visa.png" alt="IMG-VISA">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="images/icons/mastercard.png" alt="IMG-MASTERCARD">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="images/icons/express.png" alt="IMG-EXPRESS">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER">
-			</a>
-
-			<div class="t-center s-text8 p-t-20">
-				Copyright © 2018. All rights reserved.
-			</div>
-		</div>
-	</footer>
-
-
-
-	<!-- Back to top -->
-	<div class="btn-back-to-top bg0-hov" id="myBtn">
-		<span class="symbol-btn-back-to-top">
-			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
-		</span>
-	</div>
-
-	<!-- Container Selection -->
-	<div id="dropDownSelect1"></div>
-	<div id="dropDownSelect2"></div>
-
-
-
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
-	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
-	<script type="text/javascript">
-		$(".selection-1").select2({
-			minimumResultsForSearch: 20,
-			dropdownParent: $('#dropDownSelect1')
-		});
-
-		$(".selection-2").select2({
-			minimumResultsForSearch: 20,
-			dropdownParent: $('#dropDownSelect2')
-		});
-	</script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
-
-</body>
-</html>
+	

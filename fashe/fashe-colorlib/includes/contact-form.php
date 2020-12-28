@@ -1,3 +1,4 @@
+
 <?php
 
 $string = file_get_contents("config.json");
@@ -13,7 +14,7 @@ if( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['msg'])){
     if (MAIL_HOST != null) {
         $to = MAIL_HOST;
     } else {
-        $to = "lebach.tk@gmail.com";
+        $to = "zhilesh@gmail.com";
     }
     $from = $email;
     if (MAIL_TITLE != null) {
@@ -33,3 +34,5 @@ if( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['msg'])){
         echo $serialized_data;
     }
 };
+
+?>
