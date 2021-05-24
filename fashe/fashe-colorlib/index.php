@@ -49,8 +49,8 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 		<div class="container-menu-header">
 			<div class="topbar">
 				<div class="topbar-social">
-					<a href="#" class="topbar-social-item fa fa-facebook"></a>
-					<a href="#" class="topbar-social-item fa fa-instagram"></a>
+					<a href="https://www.facebook.com/" class="topbar-social-item fa fa-facebook"></a>
+					<a href="https://www.instagram.com/" class="topbar-social-item fa fa-instagram"></a>
 				</div>
 
 				<span class="topbar-child1">
@@ -65,7 +65,7 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 					<div class="topbar-language rs1-select2">
 						<select class="selection-1" name="time">
 							<option>USD</option>
-							<option>BYN</option>
+							
 						</select>
 					</div>
 				</div>
@@ -80,7 +80,7 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 				<!-- Menu -->
 				<div class="wrap_menu">
 					<nav class="menu">
-							<ul class="main_menu">
+						<ul class="main_menu">
 								<?php
 								if ($flag_enter == 1) {
 									echo "<li>
@@ -105,8 +105,6 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 							<li>
 								<a href="product.php">Shop</a>
 							</li>
-
-							
 
 							<li>
 								<a href="about.html">About</a>
@@ -135,181 +133,6 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 				</div>
 			</div>
 		</div>
-
-		<!-- Header Mobile -->
-		<div class="wrap_header_mobile">
-			<!-- Logo moblie -->
-			<a href="index.php" class="logo-mobile">
-				<img src="images/icons/logo.png" alt="IMG-LOGO">
-			</a>
-
-			<!-- Button show menu -->
-			<div class="btn-show-menu">
-				<!-- Header Icon mobile -->
-				<div class="header-icons-mobile">
-					<a href="account.php" class="header-wrapicon1 dis-block">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-					</a>
-
-					<span class="linedivide2"></span>
-
-					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti">0</span>
-
-						<!-- Header cart noti -->
-						<div class="header-cart header-dropdown">
-							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											White Shirt With Pleat Detail Back
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Converse All Star Hi Black Canvas
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Nixon Porter Leather Watch In Tan
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-									</div>
-								</li>
-							</ul>
-
-							<div class="header-cart-total">
-								Total: $75.00
-							</div>
-
-							<div class="header-cart-buttons">
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="cart.php" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										View Cart
-									</a>
-								</div>
-
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Check Out
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</div>
-			</div>
-		</div>
-
-		<!-- Menu Mobile -->
-		<div class="wrap-side-menu" >
-			<nav class="side-menu">
-				<ul class="main-menu">
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<span class="topbar-child1">
-							Free shipping for standard order over $100
-						</span>
-					</li>
-
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<div class="topbar-child2-mobile">
-							<span class="topbar-email">
-								fashe@example.com
-							</span>
-
-							<div class="topbar-language rs1-select2">
-								<select class="selection-1" name="time">
-									<option>USD</option>
-									<option>EUR</option>
-								</select>
-							</div>
-						</div>
-					</li>
-
-					<li class="item-topbar-mobile p-l-10">
-						<div class="topbar-social-mobile">
-							<a href="#" class="topbar-social-item fa fa-facebook"></a>
-							<a href="#" class="topbar-social-item fa fa-instagram"></a>
-							<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-							<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-							<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-						</div>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="index.php">Home</a>
-						<ul class="sub-menu">
-							<li><a href="index.php">Homepage V1</a></li>
-							<li><a href="home-02.html">Homepage V2</a></li>
-							<li><a href="home-03.html">Homepage V3</a></li>
-						</ul>
-						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="product.php">Shop</a>
-					</li>
-
-					
-
-					<li class="item-menu-mobile">
-						<a href="cart.php">Features</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="blog.html">Blog</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="about.html">About</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="contact.html">Contact</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
 
 	<!-- Slide1 -->
 	<section class="slide1">
@@ -387,7 +210,7 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+							<a href="product-rings.php" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
 								Rings
 							</a>
 						</div>
@@ -399,7 +222,7 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+							<a href="product-earrings.php" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
 								Earrings
 							</a>
 						</div>
@@ -413,7 +236,7 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+							<a href="product-neckleces.php" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
 								Neckleces
 							</a>
 						</div>
@@ -425,7 +248,7 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+							<a href="product-braclets.php" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
 								Braclets
 							</a>
 						</div>
@@ -439,8 +262,8 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Sets
+							<a href="product.php" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+								All products
 							</a>
 						</div>
 					</div>
@@ -451,7 +274,7 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 
 						<div class="block2-content sizefull ab-t-l flex-col-c-m">
 							<h4 class="m-text4 t-center w-size3 p-b-8">
-								Sign up & get 20% off
+								Log In & get 20% off
 							</h4>
 
 							<p class="t-center w-size4">
@@ -460,8 +283,8 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 
 							<div class="w-size2 p-t-25">
 								<!-- Button -->
-								<a href="#" class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-									Sign Up
+								<a href="account.php" class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+									Log In
 								</a>
 							</div>
 						</div>
@@ -522,8 +345,8 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 					</p>
 
 					<div class="flex-m p-t-30">
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
+						<a href="https://www.facebook.com/" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
+						<a href="https://www.instagram.com/" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
 					</div>
 				</div>
 			</div>
@@ -539,7 +362,7 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 					Newsletter
 				</h4>
 
-				<form>
+				<form method="POST" action="../fashe-colorlib/thank-subscribers.php">
 					<div class="effect1 w-size9">
 						<input class="s-text7 bg6 w-full p-b-5" type="text" name="email" placeholder="email@example.com">
 						<span class="effect1-line"></span>
@@ -547,11 +370,10 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 
 					<div class="w-size2 p-t-20">
 						<!-- Button -->
-						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" type="submit">
 							Subscribe
 						</button>
 					</div>
-
 				</form>
 			</div>
 		</div>
@@ -578,7 +400,7 @@ if(!empty($_SESSION['login']) and !empty($_SESSION['id']) and 0 == $_SESSION['ac
 			</a>
 
 			<div class="t-center s-text8 p-t-20">
-				Copyright © 2018. All rights reserved.
+				Copyright © 2021. All rights reserved.
 			</div>
 		</div>
 	</footer>

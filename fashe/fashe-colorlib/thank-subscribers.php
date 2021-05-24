@@ -11,15 +11,14 @@
 					$db = mysqli_connect('localhost', 'root', '', '4u');
 					mysqli_set_charset($db, 'utf8');
 
-					$sql = "INSERT INTO messages (id, fio, phone, email, comment) VALUE 
-						(NULL, '{$_POST['name']}', '{$_POST['email']}', 
-						'{$_POST['phone-number']}', '{$_POST['message']}')
+					$sql = "INSERT INTO subscribers (id, email) VALUE 
+						(NULL, '{$_POST['email']}')
 					";
 					
 					$result = mysqli_query($db, $sql);
 
 					if( $result ){
-						echo "Your data was added successfully";
+						echo "Your email has been successfully added to the mailing list";
 					}else{
 						echo "An error occurred";
 					}

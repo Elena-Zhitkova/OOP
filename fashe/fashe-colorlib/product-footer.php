@@ -22,8 +22,8 @@
 					</p>
 
 					<div class="flex-m p-t-30">
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
+						<a href="https://www.facebook.com/" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
+						<a href="https://www.instagram.com/" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
 					</div>
 				</div>
 			</div>
@@ -39,7 +39,7 @@
 					Newsletter
 				</h4>
 
-				<form>
+				<form method="POST" action="../fashe-colorlib/thank-subscribers.php">
 					<div class="effect1 w-size9">
 						<input class="s-text7 bg6 w-full p-b-5" type="text" name="email" placeholder="email@example.com">
 						<span class="effect1-line"></span>
@@ -47,12 +47,12 @@
 
 					<div class="w-size2 p-t-20">
 						<!-- Button -->
-						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" type="submit">
 							Subscribe
 						</button>
 					</div>
-
 				</form>
+
 			</div>
 		</div>
 
@@ -78,7 +78,7 @@
 			</a>
 
 			<div class="t-center s-text8 p-t-20">
-				Copyright © 2018. All rights reserved.
+				Copyright © 2021. All rights reserved.
 			</div>
 		</div>
 	</footer>
